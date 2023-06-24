@@ -1,0 +1,67 @@
+@font-face {
+      font-family: Lora;
+      src: url(../fonts/Lora/Lora-VariableFont_wght.ttf);
+}
+@font-face {
+      font-family: Work_sans;
+      src: url(../fonts/Work_Sans/WorkSans-VariableFont_wght.ttf);
+}
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+// Fonts
+$font-Lora: Lora;
+$font-WorkSans: Work_sans;
+
+//Colors
+$primary_clr: black;
+$second_clr: white;
+
+//Fonts Size
+$font_xl: 5.5rem;
+$font_medium: 4rem;
+$font_small: 2rem;
+$font_small_sl: 1rem;
+
+html,
+body {
+      height: 100%;
+}
+
+// ===========  HEADER  ===========
+
+header {
+      background-color: $primary_clr;
+      height: 100vh;
+      position: relative;
+      .linie {
+            text-align: center;
+            color: $second_clr;
+            padding: 6rem;
+            text-align: center;
+            border-left: 1px solid rgb(85, 85, 85);
+            position: relative;
+            left: 50%;
+      }
+      .header_content {
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%,-50%);
+             .small_title {
+                  font-family: $font-WorkSans;
+                  color: white;
+            }
+            .title{
+              color: white;
+              font-size: $font_xl;
+              font-family: $font-Lora;
+              font-weight: 600;
+              line-height: 70px;
+            }
+            
+      }
+}
