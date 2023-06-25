@@ -1,67 +1,386 @@
+@use "reset";
+
 @font-face {
       font-family: Lora;
       src: url(../fonts/Lora/Lora-VariableFont_wght.ttf);
 }
+
 @font-face {
       font-family: Work_sans;
       src: url(../fonts/Work_Sans/WorkSans-VariableFont_wght.ttf);
 }
-* {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-}
 
-// Fonts
-$font-Lora: Lora;
-$font-WorkSans: Work_sans;
-
-//Colors
+// img {
+//   width: 300px;
+// }
+// Colors
 $primary_clr: black;
-$second_clr: white;
+$secondary_clr: hsla(0, 0%, 100%, 1);
 
-//Fonts Size
-$font_xl: 5.5rem;
-$font_medium: 4rem;
-$font_small: 2rem;
-$font_small_sl: 1rem;
+// Fonts, Size
+$lora: "Lora";
+$work: "Work_sans";
+$text-XL: 88px;
+$text-L: 64px;
+$text-M: 32px;
+$text-S: 16px;
 
-html,
-body {
-      height: 100%;
-}
-
-// ===========  HEADER  ===========
-
+// ==============  HEADER ==============
 header {
-      background-color: $primary_clr;
       height: 100vh;
-      position: relative;
-      .linie {
-            text-align: center;
-            color: $second_clr;
-            padding: 6rem;
-            text-align: center;
-            border-left: 1px solid rgb(85, 85, 85);
-            position: relative;
-            left: 50%;
+      background-color: $primary_clr;
+
+      .linie_img {
+            width: 100%;
+            height: 200px;
       }
+
       .header_content {
-                  position: absolute;
-                  top: 50%;
-                  left: 50%;
-                  transform: translate(-50%,-50%);
-             .small_title {
-                  font-family: $font-WorkSans;
-                  color: white;
+            width: 530px;
+            height: auto;
+            margin: 6rem auto 16rem auto;
+            text-align: center;
+
+            .small_title {
+                  color: $secondary_clr;
+                  font-size: $text-S;
+                  font-family: $work;
+                  margin: 16px;
             }
-            .title{
-              color: white;
-              font-size: $font_xl;
-              font-family: $font-Lora;
-              font-weight: 600;
-              line-height: 70px;
+
+            .title {
+                  color: $secondary_clr;
+                  font-size: $text-XL;
+                  font-family: $lora;
+                  font-weight: 600;
+                  line-height: 70px;
+
+                  span {
+                        color: transparent;
+                        -webkit-text-stroke: 1.3px white;
+                  }
             }
-            
+      }
+
+      .icon_and_button {
+            display: flex;
+            justify-content: space-between;
+            margin: 6.25rem;
+
+            button {
+                  padding: 16px 32px;
+                  background-color: $primary_clr;
+                  border: 1px solid #fff;
+                  font-size: 20px;
+                  color: hsla(0, 0%, 100%, 1);
+                  font-family: $work;
+                  cursor: pointer;
+            }
       }
 }
+
+// ==============  HEADER ==============
+
+// ==============  LAST YEAR ==============
+.last_year {
+      padding: 100px;
+      background-color: $primary_clr;
+      color: $secondary_clr;
+      position: relative;
+      overflow: hidden;
+
+      .last_year_box .section_content_text {
+            color: hsla(0, 0%, 100%, 1);
+            font-family: $lora;
+            font-size: $text-XL;
+            font-weight: 600;
+            z-index: 2;
+            position: relative;
+      }
+
+      .map {
+            width: 600px;
+            height: auto;
+            position: absolute;
+            top: 30%;
+            left: 70%;
+            z-index: 1;
+            overflow: hidden;
+      }
+
+      .count_box {
+            margin-top: 160px;
+      }
+
+      .count_1,
+      .count_2,
+      .count_3 {
+            margin-top: 65px;
+
+            .count_title {
+                  font-family: $work;
+                  font-size: $text-S;
+                  font-weight: 600;
+            }
+
+            .count_nnumber {
+                  font-size: $text-L;
+                  font-family: $lora;
+                  font-weight: 600;
+            }
+      }
+}
+
+// ==============  LAST YEAR ==============
+
+// ==============  STUCK ==============
+.stuck {
+      height: 200vh;
+      background-color: $secondary_clr;
+      position: relative;
+
+      .img_top_right {
+            width: 300px;
+            height: auto;
+            position: relative;
+            top: -4.5rem;
+            left: 70vw;
+      }
+
+      .img_top_left {
+            width: 240px;
+            height: auto;
+            margin-top: 30px;
+            margin-left: 40px;
+      }
+
+      .img_bottom_left {
+            width: 240px;
+            height: auto;
+            position: absolute;
+            bottom: 315px;
+      }
+
+      .img_bottom_right {
+            width: 300px;
+            height: auto;
+            position: absolute;
+            right: 240px;
+            bottom: -68px;
+      }
+
+      .stuck_content {
+            width: 500px;
+            margin: 0 auto;
+
+            .stuck_title {
+                  font-size: $text-XL;
+                  font-family: $lora;
+                  font-weight: 600;
+                  line-height: 70px;
+            }
+
+            .stuck_text {
+                  font-family: $work;
+                  font-size: $text-S;
+                  font-weight: 600;
+                  line-height: 32px;
+                  margin-top: 24px;
+            }
+      }
+
+      .stuck_text_down {
+            width: 500px;
+            margin: 720px auto 240px auto;
+            font-family: $work;
+            font-size: $text-S;
+            font-weight: 600;
+            line-height: 32px;
+      }
+
+      .img_middle_right {
+            width: 240px;
+            height: auto;
+            position: absolute;
+            right: 0px;
+            top: 600px;
+      }
+
+      .img_middle_center {
+            width: 300px;
+            height: auto;
+            position: absolute;
+            left: 240px;
+            bottom: 708px;
+      }
+
+      .img_middle_center_right {
+            width: 300px;
+            height: auto;
+            position: absolute;
+            right: 200px;
+            bottom: 612px;
+      }
+}
+
+// ==============  STUCK ==============
+
+// ==============  GOLDEN ==============
+.golden_bear {
+      height: 130vh;
+      background-color: $primary_clr;
+      color: white;
+      padding: 240px 100px 24px 100px;
+
+      .golden_content {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+
+            .golden_title_box {
+                  width: 300px;
+
+                  .sec_nr {
+                        color: $secondary_clr;
+                        font-family: $work;
+                        font-size: $text-S;
+                        margin-bottom: 24px;
+                  }
+
+                  .bear_title {
+                        font-family: $lora;
+                        font-size: $text-XL;
+                        font-weight: 600;
+                        line-height: 70px;
+                  }
+            }
+
+            .golden_text_box {
+                  width: 500px;
+
+                  .golden_text {
+                        font-size: $text-M;
+                        font-family: $lora;
+                        font-weight: 600;
+                        line-height: 32px;
+                        margin-bottom: 24px;
+                  }
+
+                  .artist {
+                        color: #fff;
+                        font-size: 16px;
+                        font-family: Work Sans;
+                        font-weight: 600;
+                        line-height: 32px;
+                  }
+            }
+      }
+
+      .img_golden_left {
+            width: 700px;
+            margin-top: 38px;
+            position: relative;
+      }
+
+      .img_golden_right {
+            width: 380px;
+            height: auto;
+            position: relative;
+            left: 660px;
+            top: -28rem;
+      }
+}
+// ==============  GOLDEN ==============
+
+// ==============  POPPY ==============
+.poppy_bear {
+      height: auto;
+      position: absolute;
+      overflow: hidden;
+      padding: 240px 100px 24px 100px;
+      .text_animation {
+            width: 288px;
+            height: 288px;
+            position: absolute;
+            right: -100px;
+            top: -100px;
+            animation: rotate-btn 10s linear infinite;
+            @keyframes rotate-btn {
+                  to {
+                        transform: rotate(360deg);
+                  }
+            }
+      }
+
+      .poppy_content {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            .poppy_title_box {
+                  width: 30%;
+
+                  .sec_nr_ {
+                        color: $primary_clr;
+                        font-family: $work;
+                        font-size: $text-S;
+                        margin-bottom: 24px;
+                  }
+
+                  .poppy_title {
+                        font-family: $lora;
+                        font-size: $text-XL;
+                        font-weight: 600;
+                        line-height: 70px;
+                  }
+            }
+
+            .poppy_text_box {
+                  width: 30%;
+                  .poppy_text {
+                        font-size: $text-M;
+                        font-family: $lora;
+                        font-weight: 600;
+                        line-height: 32px;
+                        margin-bottom: 24px;
+                  }
+
+                  .artist {
+                        color:black;
+                        font-size: 16px;
+                        font-family: Work Sans;
+                        font-weight: 600;
+                        line-height: 32px;
+                  }
+            }
+      }
+      .gallery {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 60px;
+        position: relative;
+      }
+      .poppy_img_left {
+        width: 380px;
+        height: 560px;
+        position: relative;
+        left: 4rem;
+        top: 10%;
+      }
+      .poppy_img_right {
+        width: 700px;
+        position: relative;
+        left: 1rem;
+        z-index: -1;
+      }
+}
+// ==============  POPPY ==============
+
+// ==============  JOIN ==============
+.join {
+  background-color: $primary_clr;
+  height: 100vh;
+  position: absolute;
+}
+// ==============  JOIN ==============
+
