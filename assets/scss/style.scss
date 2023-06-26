@@ -10,9 +10,6 @@
       src: url(../fonts/Work_Sans/WorkSans-VariableFont_wght.ttf);
 }
 
-// img {
-//   width: 300px;
-// }
 // Colors
 $primary_clr: black;
 $secondary_clr: hsla(0, 0%, 100%, 1);
@@ -294,8 +291,7 @@ header {
 
 // ==============  POPPY ==============
 .poppy_bear {
-      height: auto;
-      position: absolute;
+      position: relative;
       overflow: hidden;
       padding: 240px 100px 24px 100px;
       .text_animation {
@@ -345,7 +341,7 @@ header {
                   }
 
                   .artist {
-                        color:black;
+                        color: black;
                         font-size: 16px;
                         font-family: Work Sans;
                         font-weight: 600;
@@ -354,33 +350,122 @@ header {
             }
       }
       .gallery {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 60px;
-        position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 60px;
+            margin-bottom: 100px;
+            position: relative;
       }
       .poppy_img_left {
-        width: 380px;
-        height: 560px;
-        position: relative;
-        left: 4rem;
-        top: 10%;
+            width: 380px;
+            height: 560px;
+            position: relative;
+            left: 3rem;
+            top: 50%;
       }
       .poppy_img_right {
-        width: 700px;
-        position: relative;
-        left: 1rem;
-        z-index: -1;
+            width: 700px;
+            position: relative;
+            top: 0;
+            left: 0;
+            z-index: -1;
       }
 }
 // ==============  POPPY ==============
 
 // ==============  JOIN ==============
 .join {
-  background-color: $primary_clr;
-  height: 100vh;
-  position: absolute;
+      background-color: $primary_clr;
+      color: $secondary_clr;
+      position: relative;
+      overflow: hidden;
+      .join_box {
+            width: 50%;
+            padding: 100px 0 64px 100px;
+            .join_us {
+                  font-size: $text-S;
+                  font-family: $work;
+                  margin-bottom: 24px;
+            }
+            .join_text {
+                  font-size: $text-M;
+                  font-family: $lora;
+                  margin-bottom: 24px;
+                  font-weight: 600;
+                  line-height: 32px;
+            }
+            .btn_let {
+                  padding: 16px 32px;
+                  background-color: $primary_clr;
+                  border: 1px solid #fff;
+                  font-size: 20px;
+                  color: hsla(0, 0%, 100%, 1);
+                  font-family: $work;
+                  cursor: pointer;
+            }
+      }
+      .text_banner {
+            width: 100%;
+            background-color: white;
+            height: 100px;
+          
+            position: absolute;
+            top: 10rem;
+            right: -49rem;
+            transform: rotate(40deg);
+            overflow: hidden;
+            display: inline-block;
+            h2 {
+                  animation: mymove linear 15s infinite;
+                  animation-delay: 1s;
+                  color: black;
+                  font-size: 4em;
+                  position: relative;
+                  font-family: $lora;
+                  font-size: $text-XL;
+                  span {
+                        color: transparent;
+                        -webkit-text-stroke: 1.3px rgb(0, 0, 0);
+                  }
+            }
+            @keyframes mymove {
+                  from {
+                        left: -1000px;
+                  }
+                  to {
+                        left: 1000px;
+                  }
+            }
+      }
+      footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 100px 100px 100px;
+            .icons {
+                  display: flex;
+                  gap: 10px;
+                  margin-bottom: 10px;
+                  img {
+                        width: 25px;
+                        height: 23px;
+                  }
+            }
+            .text_footer,
+            .date_footer {
+                  font-size: $text-S;
+                  font-family: $work;
+                  margin-bottom: 5px;
+            }
+            .footer_right {
+                  display: flex;
+                  gap: 1rem;
+                  img {
+                        width: 100px;
+                        height: 30px;
+                  }
+            }
+      }
 }
 // ==============  JOIN ==============
-
